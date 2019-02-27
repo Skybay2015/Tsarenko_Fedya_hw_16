@@ -1,51 +1,31 @@
 <?php
 
-add_filter('show_admin_bar', '__return_false');
-
-define('SQUARE_THEME_ROOT', get_template_directory_uri());
-define('SQUARE_CSS_DIR', SQUARE_THEME_ROOT . '/css');
-define('SQUARE_JS_DIR', SQUARE_THEME_ROOT . '/js');
-define('SQUARE_IMG_DIR', SQUARE_THEME_ROOT . '/img');
-
+//add_filter('show_admin_bar', '__return_false');
 
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 
 function theme_name_scripts() {
-    wp_enqueue_style( 'main', SQUARE_CSS_DIR . '/index-main.css' );
-    wp_enqueue_style( 'reset', SQUARE_CSS_DIR . '/reset.css' );
-    wp_enqueue_style( 'blogs', SQUARE_CSS_DIR . '/blogs.css' );
-    wp_enqueue_style( 'portfolio', SQUARE_CSS_DIR . '/portfolio.css' );
-    wp_enqueue_style( 'post', SQUARE_CSS_DIR . '/post.css' );
-    wp_enqueue_script( 'hamburger', SQUARE_JS_DIR . '/hamburger.js');
+    wp_enqueue_script( 'jQuery-2', '//code.jquery.com/jquery-1.11.0.min.js');
+    wp_enqueue_script( 'jQuery-1', '//code.jquery.com/jquery-migrate-1.2.1.min.js');
+    wp_enqueue_style( 'reset', get_theme_file_uri('/css/reset.css') );
+    wp_enqueue_style( 'main', get_theme_file_uri('/css/main.css' ));
+    wp_enqueue_style( 'slick', get_theme_file_uri('/slick/slick.css' ));
+    wp_enqueue_style( 'slick-theme', get_theme_file_uri('/slick/slick-theme.css') );
+    wp_enqueue_style( 'blog', get_theme_file_uri('/css/main-blog.css') );
+    wp_enqueue_style( 'portfolio', get_theme_file_uri('/css/portfolio.css') );
+    wp_enqueue_style( 'post', get_theme_file_uri('/css/post.css' ));
+    wp_enqueue_script( 'hamburger', get_theme_file_uri('/js/hamburger.js'));
+    wp_enqueue_script( 'modal', get_theme_file_uri('/js/modal.js'));
+    wp_enqueue_script( 'slick-slider', get_theme_file_uri('/slick/slick.min.js'));
+    wp_enqueue_script( 'slider-initialize', get_theme_file_uri('/slick/slider.js'));
+}
+
+if (function_exists('add_theme_support')) {
+    add_theme_support('menus');
 }
 
 add_action('init', 'create_blog');
 add_theme_support('post-thumbnails');
-function create_blog(){
-    register_post_type('blog', [
-        'labels'             => [
-            'name'               => 'Блог',
-            'singular_name'      => 'блог',
-            'add_new'            => 'Добавить блог',
-            'add_new_item'       => 'Добавить блог',
-            'edit_item'          => 'Редактировать блог',
-            'new_item'           => 'Новый блог',
-            'view_item'          => 'Посмотреть блог',
-            'search_items'       => 'Найти блог',
-            'not_found'          =>  'Блог не найдено',
-            'not_found_in_trash' => 'В корзине блог не найдено',
-            'menu_name'          => 'БЛОГ'
-
-        ],
-        'public'             => false,
-        'show_ui'            => true,
-        'show_in_menu'       => true,
-        'query_var'          => true,
-        'rewrite'            => true,
-        'capability_type'    => 'post',
-        'supports'           => array('title','editor','thumbnail')
-    ] );
-}
 
 add_action('init', 'create_portfolio');
 add_theme_support('post-thumbnails');
@@ -72,31 +52,6 @@ function create_portfolio(){
         'rewrite'            => true,
         'capability_type'    => 'post',
         'supports'            =>array('thumbnail')
-    ] );
-}
-
-add_action('init', 'create_post');
-add_theme_support('post-thumbnails');
-function create_post(){
-    register_post_type('single-post', [
-        'labels'             => [
-            'name'               => 'Пост',
-            'singular_name'      => 'пост',
-            'edit_item'          => 'Редактировать пост',
-            'view_item'          => 'Посмотреть пост',
-            'search_items'       => 'Найти пост',
-            'not_found'          =>  'пост не найдено',
-            'not_found_in_trash' => 'В корзине пост не найдено',
-            'menu_name'          => 'ПОСТ'
-
-        ],
-        'public'             => false,
-        'show_ui'            => true,
-        'show_in_menu'       => true,
-        'query_var'          => true,
-        'rewrite'            => true,
-        'capability_type'    => 'post',
-        'supports'           => array('title','editor','thumbnail')
     ] );
 }
 
@@ -161,29 +116,6 @@ function get_partners ()
     return get_posts($args);
 }
 
-function get_news ()
-{
-    $args = [
-        'numberposts' => 3,
-        'orderby' => 'date',
-        'order' => 'ASC',
-        'post_type' => 'news'
-    ];
-
-    return get_posts($args);
-}
-
-function get_blog ()
-{
-    $args = [
-        'orderby' => 'date',
-        'order' => 'ASC',
-        'post_type' => 'blog'
-    ];
-
-    return get_posts($args);
-}
-
 function get_portfolio ()
 {
     $argc = [
@@ -194,13 +126,35 @@ function get_portfolio ()
     return get_posts($argc);
 }
 
-function get_single_post ()
+function pagination($pages = '', $range = 4)
 {
-    $argc = [
-        'orderby' => 'date',
-        'order' => 'ASC',
-        'post_type' => 'single-post'
-    ];
-    return get_posts($argc);
+    $showitems = ($range * 2)+1;
+    global $paged;
+    if(empty($paged)) $paged = 1;
+    if($pages == '')
+    {
+        global $wp_query;
+        $pages = $wp_query->max_num_pages;
+        if(!$pages)
+        {
+            $pages = 1;
+        }
+    }
+    if(1 != $pages)
+    {
+        echo "<div class=\"blog-navigation\">";
+
+        if($paged > 1) echo "<button class=\"blog-navigation-btn\">"."<a href='".get_pagenum_link($paged - 1)."'>Prev</a>"."</button>";
+        for ($i=1; $i <= $pages; $i++)
+        {
+            if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+            {
+                echo ($paged == $i)? "<span class=\"blog-page\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"blog-page\">".$i."</a>";
+            }
+        }
+        if ($paged < $pages) echo "<button class=\"blog-navigation-btn\">"."<a href=\"".get_pagenum_link($paged + 1)."\">Next</a>".
+        "</button>";
+        echo "</div>\n";
+    }
 }
 
