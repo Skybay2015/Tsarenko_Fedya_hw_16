@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec0ddb58-8808-47e6-9ceb-8317b177ee35" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +25,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="18" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
           <entry key="html" value="1" />
           <entry key="js" value="8" />
           <entry key="markdown" value="1" />
@@ -41,14 +41,14 @@
           <entry key="JavaScript" value="8" />
           <entry key="Markdown" value="1" />
           <entry key="PHP" value="59" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="Sass" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1103" />
-          <entry key="gitignore" value="6" />
+          <entry key="gitignore" value="20" />
           <entry key="js" value="1210" />
           <entry key="php" value="7340" />
           <entry key="sass" value="62" />
@@ -60,7 +60,7 @@
           <entry key="HTML" value="11" />
           <entry key="JavaScript" value="1210" />
           <entry key="PHP" value="7329" />
-          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="PLAIN_TEXT" value="20" />
           <entry key="Sass" value="62" />
         </counts>
       </usages-collector>
@@ -71,11 +71,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/square/page-front.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="219">
               <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -208,7 +217,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/square/home.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/square/page-home.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/square/portfolio.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/wp-content/themes/square/css/index-main.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/square/page-test.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/twentynineteen/functions.php" />
@@ -235,6 +243,7 @@
         <option value="$PROJECT_DIR$/wp-content/themes/square/js/modal.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/square/index.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/square/functions.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -354,12 +363,12 @@
       <workItem from="1550319338926" duration="3615000" />
       <workItem from="1550680201864" duration="26385000" />
       <workItem from="1551111960838" duration="31388000" />
-      <workItem from="1551225268109" duration="19052000" />
+      <workItem from="1551225268109" duration="19364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80440000" />
+    <option name="totallyTimeSpent" value="80752000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -372,6 +381,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49910232" visible="true" weight="0.13447782" />
       <window_info id="Structure" order="1" sideWeight="0.50089765" side_tool="true" weight="0.13447782" />
@@ -446,13 +456,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/square/search.php" />
     <entry file="file://$PROJECT_DIR$/wp-content/themes/square/single-product.php" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/square/page-test.php" />
     <entry file="file://$PROJECT_DIR$/wp-content/themes/twentynineteen/page-test.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -610,6 +613,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
         </state>
       </provider>
     </entry>
