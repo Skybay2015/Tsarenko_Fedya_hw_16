@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ec0ddb58-8808-47e6-9ceb-8317b177ee35" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/square/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/square/functions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +65,9 @@
         </counts>
       </usages-collector>
     </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="wordpress" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -352,12 +354,12 @@
       <workItem from="1550319338926" duration="3615000" />
       <workItem from="1550680201864" duration="26385000" />
       <workItem from="1551111960838" duration="31388000" />
-      <workItem from="1551225268109" duration="18008000" />
+      <workItem from="1551225268109" duration="19052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79396000" />
+    <option name="totallyTimeSpent" value="80440000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,9 +373,9 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13447782" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49910232" visible="true" weight="0.13447782" />
+      <window_info id="Structure" order="1" sideWeight="0.50089765" side_tool="true" weight="0.13447782" />
+      <window_info id="Favorites" order="2" sideWeight="0.50089765" side_tool="true" weight="0.13447782" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" />
