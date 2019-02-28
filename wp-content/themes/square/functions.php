@@ -24,9 +24,6 @@ if (function_exists('add_theme_support')) {
     add_theme_support('menus');
 }
 
-add_action('init', 'create_blog');
-add_theme_support('post-thumbnails');
-
 add_action('init', 'create_portfolio');
 add_theme_support('post-thumbnails');
 function create_portfolio(){
