@@ -175,3 +175,14 @@ function customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'customize_register' );
 
+function square_customize_css()
+{
+    ?>
+    <style type="text/css">
+        body{ color: <?php echo get_theme_mod('body_bg_color', '#000000'); ?>; }
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'sqaure_customize_css');
+
+
